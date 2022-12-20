@@ -1,3 +1,6 @@
+if game:IsLoaded() then
+ if game.PlaceId == 6872265039 then
+ 
 local UILib = loadstring(game:HttpGet('https://raw.githubusercontent.com/inceldom/kinx/main/ui'))()
 
 local win = UILib:Window("DodobirdV4",Color3.fromRGB(44, 120, 224), Enum.KeyCode.RightShift)
@@ -172,3 +175,7 @@ Settings:Label("UI Toggle Key:  Right-Shift")
 Settings:Button("Copy Discord Invite", function()
     UILib:Notification("Notification", "Error", "Okay")
 end)
+end
+ else
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/xwavescripts/DodobirdV4Main/main/NotConfigGame"))()
+end
