@@ -1,6 +1,6 @@
 local UILib = loadstring(game:HttpGet('https://raw.githubusercontent.com/inceldom/kinx/main/ui'))()
 
-local win = UILib:Window("DodobirdV4 " + game.Name + "Regular",Color3.fromRGB(44, 120, 224), Enum.KeyCode.RightShift)
+local win = UILib:Window("DodobirdV4",Color3.fromRGB(44, 120, 224), Enum.KeyCode.RightShift)
 
 --------------------------------------------------------------------
 
@@ -15,7 +15,7 @@ local char = client.Character
 
 local noclip = false
 
-MainSection:Toggle("Noclip (Will Suffocate)",false, function(t)
+MainSection:Toggle("Noclip (Will Suffocate)",true, function(t)
     noclip = t
 end)
 
@@ -146,7 +146,7 @@ pcall(function()
 end)
 
 -- Enables/Disables ESP. Main toggle
-ESPSection:Toggle("ESP",false, function(t)
+ESPSection:Toggle("ESP",true, function(t)
     ESPEnabled = t
 end)
 
@@ -156,7 +156,7 @@ ESPSection:Toggle("Tracers",true, function(t)
 end)
 
 -- Toggles distance display
-ESPSection:Toggle("Distance Display",false, function(t)
+ESPSection:Toggle("Distance Display",true, function(t)
     DistanceEnabled = t
 end)
 
@@ -167,7 +167,7 @@ end)
 local Settings = win:Tab("Settings")
 
 
-Settings:Label("UI Toggle Key:  Right-Ctrl")
+Settings:Label("UI Toggle Key:  Right-Shift")
 
 Settings:Button("Copy Discord Invite", function()
     UILib:Notification("Notification", "Error", "Okay")
